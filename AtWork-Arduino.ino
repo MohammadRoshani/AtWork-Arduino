@@ -41,8 +41,6 @@ void setup()
   Serial.begin(9600); // Starts the serial communication
   Wire.begin();
   
-  Compass.SetDeclination(23, 35, 'E');
-  Compass.SetSamplingMode(COMPASS_SINGLE);
   Compass.SetScale(COMPASS_SCALE_130);
   Compass.SetOrientation(COMPASS_HORIZONTAL_X_NORTH);
 }
