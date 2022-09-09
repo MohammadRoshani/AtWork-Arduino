@@ -22,5 +22,36 @@ void setup() {
 }
 void loop() {
   Serial.println(sensorsManager.GetStatusString());
-  controller.rotate(300, -300);
+  Forward();
+  delay(1000);
+  Rotate90CC();
+  delay(1000);
+  Rotate90CCW();
+  delay(1000);
+  Rotate180();
+}
+
+void Rotate90CC()
+{
+  controller.rotate(-180, -180);
+}
+
+void Rotate90CCW()
+{
+  controller.rotate(180, 180);
+}
+
+void Rotate180()
+{
+  controller.rotate(360, 360);
+}
+
+void Forward()
+{
+  controller.rotate(360, -360);
+}
+
+void Stop()
+{
+  controller.startBrake();
 }
