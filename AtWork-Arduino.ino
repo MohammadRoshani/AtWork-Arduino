@@ -83,9 +83,9 @@ void loop()
     break;
   case 'f':
     forward();
-    delay(150);
+    delay(50);
     stop();
-    delay(100);
+    delay(10);
     break;
   default:
     stop();
@@ -126,8 +126,8 @@ void distance()
   else
     dis1 = distances[1];
 
-  dis2 = distances[3];
-  dis3 = distances[4];
+  dis2 = distances[2];
+  dis3 = distances[3];
 }
 
 void heading()
