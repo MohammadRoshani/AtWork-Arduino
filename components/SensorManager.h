@@ -27,6 +27,8 @@ class SensorManager
 public:
     void Setup();
     void GetStatus(float *status);
+    float* GetDistances();
+    float GetHeading();
     String GetStatusString();
 
     struct SensorsStruct

@@ -40,6 +40,24 @@ inline void SensorManager::GetStatus(float *status)
     status = i;
 }
 
+inline float* SensorManager::GetDistances()
+{
+    float * distances = new float[5];
+    distances[0] = Sensors.SRF1.getCentimeter();
+    distances[1] = Sensors.SRF2.getCentimeter();
+    distances[2] = Sensors.SRF3.getCentimeter();
+    distances[3] = Sensors.SRF4.getCentimeter();
+    distances[4] = Sensors.SRF5.getCentimeter();
+
+    return distances;
+}
+
+inline float SensorManager::GetHeading()
+{
+    float heading = Sensors.Compass.readHeading();
+    return heading;
+}
+
 inline String SensorManager::GetStatusString()
 {
     float distance1 = Sensors.SRF1.getCentimeter();
